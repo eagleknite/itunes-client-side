@@ -3,6 +3,14 @@
 
 The client for the iTunes Search App provides a user-friendly interface to search for media on iTunes.
 
+### Installation
+
+1. Clone the repository:
+
+```bash
+git clone [https://github.com/eagleknite/itunes-client-side] itunes-search-app
+cd itunes-client-side
+
 ## Getting Started
 
 To start the client:
@@ -10,6 +18,8 @@ To start the client:
 ```bash
 npm run start
 ```
+## Link to the deployed app
+https://search-itunes-store.onrender.com/
 
 This will start the React development server and open the app in your default web browser.
 
