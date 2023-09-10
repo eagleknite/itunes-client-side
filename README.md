@@ -51,6 +51,9 @@ This will start the React development server and open the app in your default we
 ## Proxy
 
 To handle requests to the backend, a proxy is set to `http://localhost:5000`.
+- add proxy this proxy to package.json in the client side to run it locally
+- To run this locally, you will need to download the backend api from github 
+link: https://github.com/eagleknite/itunes-search-app and run it on port 5000.
 
 ## Development
 
@@ -67,3 +70,6 @@ The app is configured to target:
 
 - Production: Browsers with more than 0.2% market share, excluding Opera Mini.
 - Development: The last versions of Chrome, Firefox, and Safari.
+
+## Author
+- Arnold Twala
