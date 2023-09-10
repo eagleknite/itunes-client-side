@@ -48,19 +48,12 @@ function SearchBar() {
         }
     }, [dispatch, term, media, sort, currentPage, setSearchParams, navigate]);
 
-    // Effect to trigger search when current page changes
-    useEffect(() => {
-        if (term) {
-            handleSearch();
-        }
-    }, [currentPage, handleSearch, term]);
-
     // Effect to trigger search when sort option changes
     useEffect(() => {
-        if (term) {
+        if (currentSearchTerm) {
             handleSearch();
         }
-    }, [sort, handleSearch, term]);
+    }, [sort, handleSearch]);
 
     // Function to handle form submission
     const handleSubmit = (e) => {
@@ -89,7 +82,7 @@ function SearchBar() {
                     />
                     <div className="flex justify-between items-center">
                         <MediaTypeFilter selectedMedia={media} onMediaChange={setMedia} />
-                        <button onClick={handleSearch} className="bg-blue-500 text-white p-2 rounded-md ml-2 hover:bg-blue-600 transition-colors">Search</button>
+                        <button className="bg-blue-500 text-white p-2 rounded-md ml-2 hover:bg-blue-600 transition-colors">Search</button>
                         <SortOptions selectedSort={sort} onSortChange={setSort} />
                     </div>
                 </form>

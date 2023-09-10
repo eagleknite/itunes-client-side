@@ -15,7 +15,6 @@ function SortOptions({ selectedSort, onSortChange }) {
             <option value="trackPrice">Price</option>
             <option value="primaryGenreName">Genre</option>
             <option value="artistName">Artist</option>
-            <option value="collectionName">Album</option>
         </select>
     </div>
   )

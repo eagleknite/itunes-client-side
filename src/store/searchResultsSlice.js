@@ -2,6 +2,7 @@ import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import { setError, clearError, setLoading } from './uiSlice';
 import axios from 'axios';
 
+const BACKEND_BASE_URL = process.env.REACT_APP_BACKEND_BASE_URL || '';
 // Define an asynchronous action to fetch search results from an external API
 export const fetchSearchResults = createAsyncThunk('search/fetchSearchResults', async ({ term, media, sort, page = 1 }, { dispatch }) => {
     // Clear any previous error messages
@@ -11,7 +12,7 @@ export const fetchSearchResults = createAsyncThunk('search/fetchSearchResults', 
     
     try {
         // Make a GET request to the API with the provided search parameters
-        const response = await axios.get(`/api/search?term=${term}&media=${media}&sort=${sort}&page=${page}`);
+        const response = await axios.get(`${BACKEND_BASE_URL}/api/search?term=${term}&media=${media}&sort=${sort}&page=${page}`);
         
         // Indicate in the UI that loading has completed
         dispatch(setLoading(false));
